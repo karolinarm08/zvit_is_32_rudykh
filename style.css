@@ -1,0 +1,96 @@
+body {
+    font-family: math;
+    background-color: #ffffff;
+    color: #000000;
+  }
+  h1, h2, h3 {
+      text-align: center;
+  }
+  .container {
+      display: flex;
+      justify-content: space-between;
+  }
+  .sidebar {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      flex-wrap: nowrap;
+  }
+  .content {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #dadada;
+      border-radius: 10px;
+  }
+  .nav-buttons {
+      display: flex;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      flex-direction: row;
+  }
+  .nav-buttons button {
+      font-family: math;
+      padding: 10px;
+      cursor: pointer;
+      background-color: #f0f0f0;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      width:min-content;
+  
+  }
+  .sidebar button {
+      font-family: math;
+      width: 100%;
+      padding: 10px;
+      cursor: pointer;
+      margin-bottom: 10px;
+      background-color: #f0f0f0;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+  
+  }
+  .hidden {
+      display: none;
+  }
+  
+  .button.dist {
+      width: 80%;
+  }
+  
+  .visible {
+      display: block;
+  }
+  
+  .button {
+      font-family: math;
+      background-color: #f0f0f0; 
+      border: 1px solid #ccc;
+      padding: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease; 
+      margin: 5px;
+  }
+  
+  .button:hover {
+      border-color: #9325bb;
+      border-radius: 10px;
+  }
+  
+  .button.active {
+      background-color: #9325bb; 
+      color: #ffffff;
+      border: 2px solid #9325bb;
+  }
+  
+  .sidebar button:hover {
+      border-color: #1fa6cb;
+      border-radius: 10px;
+  }
+  
+  .sidebar button.active {
+      background-color: #1fa6cb; 
+      color: #ffffff;
+      border: 2px solid #1fa6cb;
+  }
+  
