@@ -11,131 +11,135 @@
     <title>Звіти</title>
 </head>
 <body>
-    <div style="display: flex; flex-direction: row; width: 100%; padding: 10px; align-items: center; justify-content: space-evenly;">
-        <div>
-            <h1>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
-            <h2>з дисципліни «ІНТЕРНЕТ-ТЕХНОЛОГІЇ та ПРОЄКТУВАННЯ WEB-ЗАСТОСУВАНЬ»</h2>
-            <h3>Студентки групи ІС-32 Рудих Кароліни</h3> 
-        </div>            
-        <img src="./image/000.jpg" height="150px" style="align-items: end;">  
-    </div>
-    <div class="nav-buttons">
-        <button class="button" onclick="activateButton(this, 'lab1-content')" onclick="showLab('lab1')">Лабораторна робота №1</button>
-        <button class="button" onclick="activateButton(this, 'lab2-content')" onclick="showLab('lab2')">Лабораторна робота №2</button>
-        <button class="button" onclick="activateButton(this, 'lab3-content')" onclick="showLab('lab3')">Лабораторна робота №3</button>
-        <button class="button" onclick="activateButton(this, 'lab4-content')" onclick="showLab('lab4')">Лабораторна робота №4</button>
-        <button class="button" onclick="activateButton(this, 'lab5-content')" onclick="showLab('lab5')">Лабораторна робота №5</button>
-        <button class="button" onclick="activateButton(this, 'lab6-content')" onclick="showLab('lab6')">Лабораторна робота №6</button>
-        <button class="button" onclick="activateButton(this, 'lab7-content')" onclick="showLab('lab7')">Лабораторна робота №7</button>
-        <button class="button" onclick="activateButton(this, 'lab8-content')" onclick="showLab('lab8')">Лабораторна робота №8</button>
-        <button class="button" onclick="activateButton(this, 'lab9-content')" onclick="showLab('lab9')">Лабораторна робота №9</button>
-    </div>
+    <header></header>
 
-    <div class="container">
-        <div class="sidebar">
-            <button class="button" onclick="activeButton(this), showSection('description')">Опис предметного середовища</button>
-            <button class="button" onclick="activeButton(this), showSection('topic')">Тема Мета Місце розташування лаби</button>
-            <button class="button" onclick="activeButton(this), showSection('structure')">СТРУКТУРА ДОКУМЕНТА</button>
-            <button class="button dist" onclick="activeButton(this), showSection('htmlTables')">HTML-код ТАБЛИЦЬ</button>
-            <button class="button dist" onclick="activeButton(this), showSection('htmlForms')">HTML-код ФОРМИ</button>
-            <button class="button dist" onclick="activeButton(this), showSection('htmlImages')">HTML-код ЗОБРАЖЕННЯ</button>
-            <button class="button" onclick="activeButton(this), showSection('conclusions')">ВИСНОВКИ</button>
+    <main>
+        <div style="display: flex; flex-direction: row; width: 100%; padding: 10px; align-items: center; justify-content: space-evenly;">
+            <div>
+                <h1>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
+                <h2>з дисципліни «ІНТЕРНЕТ-ТЕХНОЛОГІЇ та ПРОЄКТУВАННЯ WEB-ЗАСТОСУВАНЬ»</h2>
+                <h3>Студентки групи ІС-32 Рудих Кароліни</h3> 
+            </div>            
+            <img src="./image/000.jpg" height="150px" style="align-items: end;">  
+        </div>
+        <div class="nav-buttons">
+            <button class="button" onclick="activateButton(this, 'lab1-content')" onclick="showLab('lab1')">Лабораторна робота №1</button>
+            <button class="button" onclick="activateButton(this, 'lab2-content')" onclick="showLab('lab2')">Лабораторна робота №2</button>
+            <button class="button" onclick="activateButton(this, 'lab3-content')" onclick="showLab('lab3')">Лабораторна робота №3</button>
+            <button class="button" onclick="activateButton(this, 'lab4-content')" onclick="showLab('lab4')">Лабораторна робота №4</button>
+            <button class="button" onclick="activateButton(this, 'lab5-content')" onclick="showLab('lab5')">Лабораторна робота №5</button>
+            <button class="button" onclick="activateButton(this, 'lab6-content')" onclick="showLab('lab6')">Лабораторна робота №6</button>
+            <button class="button" onclick="activateButton(this, 'lab7-content')" onclick="showLab('lab7')">Лабораторна робота №7</button>
+            <button class="button" onclick="activateButton(this, 'lab8-content')" onclick="showLab('lab8')">Лабораторна робота №8</button>
+            <button class="button" onclick="activateButton(this, 'lab9-content')" onclick="showLab('lab9')">Лабораторна робота №9</button>
         </div>
 
-        <div class="content">
-            <div id="lab1-content" class="hidden">
-                <div id="lab1-description" class="hidden">Опис предметного середовища для лабораторної роботи №1</div>
-                <div id="lab1-topic" class="hidden">Тема та мета лабораторної роботи №1</div>
-                <div id="lab1-structure" class="hidden">Структура документа для лабораторної роботи №1</div>
-                <div id="lab1-htmlTables" class="hidden">HTML-код таблиць для лабораторної роботи №1</div>
-                <div id="lab1-htmlForms" class="hidden">HTML-код форм для лабораторної роботи №1</div>
-                <div id="lab1-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №1</div>
-                <div id="lab1-conclusions" class="hidden">Висновки по лабораторній роботі №1</div>
+        <div class="container">
+            <div class="sidebar">
+                <button class="button" onclick="activeButton(this), showSection('description')">Опис предметного середовища</button>
+                <button class="button" onclick="activeButton(this), showSection('topic')">Тема Мета Місце розташування лаби</button>
+                <button class="button" onclick="activeButton(this), showSection('structure')">СТРУКТУРА ДОКУМЕНТА</button>
+                <button class="button dist" onclick="activeButton(this), showSection('htmlTables')">HTML-код ТАБЛИЦЬ</button>
+                <button class="button dist" onclick="activeButton(this), showSection('htmlForms')">HTML-код ФОРМИ</button>
+                <button class="button dist" onclick="activeButton(this), showSection('htmlImages')">HTML-код ЗОБРАЖЕННЯ</button>
+                <button class="button" onclick="activeButton(this), showSection('conclusions')">ВИСНОВКИ</button>
             </div>
 
-            <div id="lab2-content" class="hidden">
-                <div id="lab2-description" class="hidden">Опис предметного середовища для лабораторної роботи №2</div>
-                <div id="lab2-topic" class="hidden">Тема та мета лабораторної роботи №2</div>
-                <div id="lab2-structure" class="hidden">Структура документа для лабораторної роботи №2</div>
-                <div id="lab2-htmlTables" class="hidden">HTML-код таблиць для лабораторної роботи №2</div>
-                <div id="lab2-htmlForms" class="hidden">HTML-код форм для лабораторної роботи №2</div>
-                <div id="lab2-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №2</div>
-                <div id="lab2-conclusions" class="hidden">Висновки по лабораторній роботі №2</div>
-            </div>
+            <div class="content">
+                <div id="lab1-content" class="hidden">
+                    <div id="lab1-description" class="hidden">Веб-сайт кондитерської є онлайн-платформою, що пропонує клієнтам широкий асортимент десертів і кондитерських виробів, забезпечуючи зручний процес перегляду, замовлення та доставки. Користувачі можуть ознайомитися з різними категоріями продукції з детальним описом, ціною, зображенням, а також переглядати відгуки інших покупців. Користувачі можуть додавати вибрані продукти в корзину і переходити до оформлення замовлення. Крім того, веб-сайт має спеціальні розділи для акцій, знижок та сезонних пропозицій, що дозволяє залучити більше клієнтів та стимулювати продажі.</div>
+                    <div id="lab1-topic" class="hidden">Тема та мета лабораторної роботи №1</div>
+                    <div id="lab1-structure" class="hidden">Структура документа для лабораторної роботи №1</div>
+                    <div id="lab1-htmlTables" class="hidden">HTML-код таблиць для лабораторної роботи №1</div>
+                    <div id="lab1-htmlForms" class="hidden">HTML-код форм для лабораторної роботи №1</div>
+                    <div id="lab1-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №1</div>
+                    <div id="lab1-conclusions" class="hidden">Висновки по лабораторній роботі №1</div>
+                </div>
 
-            <div id="lab3-content" class="hidden">
-                <div id="lab3-description" class="hidden">Опис предметного середовища для лабораторної роботи №3</div>
-                <div id="lab3-topic" class="hidden">Тема та мета лабораторної роботи №3</div>
-                <div id="lab3-structure" class="hidden">Структура документа для лабораторної роботи №3</div>
-                <div id="lab3-htmlTables" class="hidden">HTML-код таблиць для лабораторної роботи №3</div>
-                <div id="lab3-htmlForms" class="hidden">HTML-код форм для лабораторної роботи №3</div>
-                <div id="lab3-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №3</div>
-                <div id="lab3-conclusions" class="hidden">Висновки по лабораторній роботі №3</div>
-            </div>
+                <div id="lab2-content" class="hidden">
+                    <div id="lab2-description" class="hidden">Опис предметного середовища для лабораторної роботи №2</div>
+                    <div id="lab2-topic" class="hidden">Тема та мета лабораторної роботи №2</div>
+                    <div id="lab2-structure" class="hidden">Структура документа для лабораторної роботи №2</div>
+                    <div id="lab2-htmlTables" class="hidden">HTML-код таблиць для лабораторної роботи №2</div>
+                    <div id="lab2-htmlForms" class="hidden">HTML-код форм для лабораторної роботи №2</div>
+                    <div id="lab2-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №2</div>
+                    <div id="lab2-conclusions" class="hidden">Висновки по лабораторній роботі №2</div>
+                </div>
 
-            <div id="lab4-content" class="hidden">
-                <div id="lab4-description" class="hidden">Опис предметного середовища для лабораторної роботи №4</div>
-                <div id="lab4-topic" class="hidden">Тема та мета лабораторної роботи №4</div>
-                <div id="lab4-structure" class="hidden">Структура документа для лабораторної роботи №4</div>
-                <div id="lab4-htmlTables" class="hidden">HTML-код таблиць для лабораторної роботи №4</div>
-                <div id="lab4-htmlForms" class="hidden">HTML-код форм для лабораторної роботи №4</div>
-                <div id="lab4-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №4</div>
-                <div id="lab4-conclusions" class="hidden">Висновки по лабораторній роботі №4</div>
-            </div>
+                <div id="lab3-content" class="hidden">
+                    <div id="lab3-description" class="hidden">Опис предметного середовища для лабораторної роботи №3</div>
+                    <div id="lab3-topic" class="hidden">Тема та мета лабораторної роботи №3</div>
+                    <div id="lab3-structure" class="hidden">Структура документа для лабораторної роботи №3</div>
+                    <div id="lab3-htmlTables" class="hidden">HTML-код таблиць для лабораторної роботи №3</div>
+                    <div id="lab3-htmlForms" class="hidden">HTML-код форм для лабораторної роботи №3</div>
+                    <div id="lab3-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №3</div>
+                    <div id="lab3-conclusions" class="hidden">Висновки по лабораторній роботі №3</div>
+                </div>
 
-            <div id="lab5-content" class="hidden">
-                <div id="lab5-description" class="hidden">Опис предметного середовища для лабораторної роботи №5</div>
-                <div id="lab5-topic" class="hidden">Тема та мета лабораторної роботи №5</div>
-                <div id="lab5-structure" class="hidden">Структура документа для лабораторної роботи №5</div>
-                <div id="lab5-htmlTables" class="hidden">HTML-код таблиць для лабораторної роботи №5</div>
-                <div id="lab5-htmlForms" class="hidden">HTML-код форм для лабораторної роботи №5</div>
-                <div id="lab5-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №5</div>
-                <div id="lab5-conclusions" class="hidden">Висновки по лабораторній роботі №5</div>
-            </div>
+                <div id="lab4-content" class="hidden">
+                    <div id="lab4-description" class="hidden">Опис предметного середовища для лабораторної роботи №4</div>
+                    <div id="lab4-topic" class="hidden">Тема та мета лабораторної роботи №4</div>
+                    <div id="lab4-structure" class="hidden">Структура документа для лабораторної роботи №4</div>
+                    <div id="lab4-htmlTables" class="hidden">HTML-код таблиць для лабораторної роботи №4</div>
+                    <div id="lab4-htmlForms" class="hidden">HTML-код форм для лабораторної роботи №4</div>
+                    <div id="lab4-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №4</div>
+                    <div id="lab4-conclusions" class="hidden">Висновки по лабораторній роботі №4</div>
+                </div>
 
-            <div id="lab6-content" class="hidden">
-                <div id="lab6-description" class="hidden">Опис предметного середовища для лабораторної роботи №6</div>
-                <div id="lab6-topic" class="hidden">Тема та мета лабораторної роботи №6</div>
-                <div id="lab6-structure" class="hidden">Структура документа для лабораторної роботи №6</div>
-                <div id="lab6-htmlTables" class="hidden">HTML-код таблиць для лабораторної роботи №6</div>
-                <div id="lab6-htmlForms" class="hidden">HTML-код форм для лабораторної роботи №6</div>
-                <div id="lab6-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №6</div>
-                <div id="lab6-conclusions" class="hidden">Висновки по лабораторній роботі №6</div>
-            </div>
+                <div id="lab5-content" class="hidden">
+                    <div id="lab5-description" class="hidden">Опис предметного середовища для лабораторної роботи №5</div>
+                    <div id="lab5-topic" class="hidden">Тема та мета лабораторної роботи №5</div>
+                    <div id="lab5-structure" class="hidden">Структура документа для лабораторної роботи №5</div>
+                    <div id="lab5-htmlTables" class="hidden">HTML-код таблиць для лабораторної роботи №5</div>
+                    <div id="lab5-htmlForms" class="hidden">HTML-код форм для лабораторної роботи №5</div>
+                    <div id="lab5-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №5</div>
+                    <div id="lab5-conclusions" class="hidden">Висновки по лабораторній роботі №5</div>
+                </div>
 
-            <div id="lab7-content" class="hidden">
-                <div id="lab7-description" class="hidden">Опис предметного середовища для лабораторної роботи №7</div>
-                <div id="lab7-topic" class="hidden">Тема та мета лабораторної роботи №7</div>
-                <div id="lab7-structure" class="hidden">Структура документа для лабораторної роботи №7</div>
-                <div id="lab7-htmlTables" class="hidden">HTML-код таблиць для лабораторної роботи №7</div>
-                <div id="lab7-htmlForms" class="hidden">HTML-код форм для лабораторної роботи №7</div>
-                <div id="lab7-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №7</div>
-                <div id="lab7-conclusions" class="hidden">Висновки по лабораторній роботі №7</div>
-            </div>
+                <div id="lab6-content" class="hidden">
+                    <div id="lab6-description" class="hidden">Опис предметного середовища для лабораторної роботи №6</div>
+                    <div id="lab6-topic" class="hidden">Тема та мета лабораторної роботи №6</div>
+                    <div id="lab6-structure" class="hidden">Структура документа для лабораторної роботи №6</div>
+                    <div id="lab6-htmlTables" class="hidden">HTML-код таблиць для лабораторної роботи №6</div>
+                    <div id="lab6-htmlForms" class="hidden">HTML-код форм для лабораторної роботи №6</div>
+                    <div id="lab6-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №6</div>
+                    <div id="lab6-conclusions" class="hidden">Висновки по лабораторній роботі №6</div>
+                </div>
 
-            <div id="lab8-content" class="hidden">
-                <div id="lab8-description" class="hidden">Опис предметного середовища для лабораторної роботи №8</div>
-                <div id="lab8-topic" class="hidden">Тема та мета лабораторної роботи №8</div>
-                <div id="lab8-structure" class="hidden">Структура документа для лабораторної роботи №8</div>
-                <div id="lab8-htmlTables" class="hidden">HTML-код таблиць для лабораторної роботи №8</div>
-                <div id="lab8-htmlForms" class="hidden">HTML-код форм для лабораторної роботи №8</div>
-                <div id="lab8-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №8</div>
-                <div id="lab8-conclusions" class="hidden">Висновки по лабораторній роботі №8</div>
-            </div>
+                <div id="lab7-content" class="hidden">
+                    <div id="lab7-description" class="hidden">Опис предметного середовища для лабораторної роботи №7</div>
+                    <div id="lab7-topic" class="hidden">Тема та мета лабораторної роботи №7</div>
+                    <div id="lab7-structure" class="hidden">Структура документа для лабораторної роботи №7</div>
+                    <div id="lab7-htmlTables" class="hidden">HTML-код таблиць для лабораторної роботи №7</div>
+                    <div id="lab7-htmlForms" class="hidden">HTML-код форм для лабораторної роботи №7</div>
+                    <div id="lab7-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №7</div>
+                    <div id="lab7-conclusions" class="hidden">Висновки по лабораторній роботі №7</div>
+                </div>
 
-            <div id="lab9-content" class="hidden">
-                <div id="lab9-description" class="hidden">Опис предметного середовища для лабораторної роботи №9</div>
-                <div id="lab9-topic" class="hidden">Тема та мета лабораторної роботи №9</div>
-                <div id="lab9-structure" class="hidden">Структура документа для лабораторної роботи №9</div>
-                <div id="lab9-htmlTables" class="hidden">HTML-код таблиць для лабораторної роботи №9</div>
-                <div id="lab9-htmlForms" class="hidden">HTML-код форм для лабораторної роботи №9</div>
-                <div id="lab9-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №9</div>
-                <div id="lab9-conclusions" class="hidden">Висновки по лабораторній роботі №9</div>
-            </div>
+                <div id="lab8-content" class="hidden">
+                    <div id="lab8-description" class="hidden">Опис предметного середовища для лабораторної роботи №8</div>
+                    <div id="lab8-topic" class="hidden">Тема та мета лабораторної роботи №8</div>
+                    <div id="lab8-structure" class="hidden">Структура документа для лабораторної роботи №8</div>
+                    <div id="lab8-htmlTables" class="hidden">HTML-код таблиць для лабораторної роботи №8</div>
+                    <div id="lab8-htmlForms" class="hidden">HTML-код форм для лабораторної роботи №8</div>
+                    <div id="lab8-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №8</div>
+                    <div id="lab8-conclusions" class="hidden">Висновки по лабораторній роботі №8</div>
+                </div>
 
+                <div id="lab9-content" class="hidden">
+                    <div id="lab9-description" class="hidden">Опис предметного середовища для лабораторної роботи №9</div>
+                    <div id="lab9-topic" class="hidden">Тема та мета лабораторної роботи №9</div>
+                    <div id="lab9-structure" class="hidden">Структура документа для лабораторної роботи №9</div>
+                    <div id="lab9-htmlTables" class="hidden">HTML-код таблиць для лабораторної роботи №9</div>
+                    <div id="lab9-htmlForms" class="hidden">HTML-код форм для лабораторної роботи №9</div>
+                    <div id="lab9-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №9</div>
+                    <div id="lab9-conclusions" class="hidden">Висновки по лабораторній роботі №9</div>
+                </div>
+
+            </div>
         </div>
-    </div>
-
+    </main>
+    <footer></footer>
     <script>
         function showLab(labId) {
             let labs = document.querySelectorAll('.content > div');
