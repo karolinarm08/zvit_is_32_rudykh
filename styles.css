@@ -93,4 +93,9 @@ body {
       color: #ffffff;
       border: 2px solid #1fa6cb;
   }
+
+  .tr, .td{
+    border-collapse: collapse;
+    border: 1px solid black;
+  }
   
