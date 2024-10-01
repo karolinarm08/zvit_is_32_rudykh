@@ -77,11 +77,7 @@ body {
       border-radius: 10px;
   }
   
-  .button.active {
-      background-color: #9325bb; 
-      color: #ffffff;
-      border: 2px solid #9325bb;
-  }
+ 
   
   .sidebar button:hover {
       border-color: #1fa6cb;
@@ -99,3 +95,67 @@ body {
     border: 1px solid black;
   }
   
+  body {
+    font-family: math;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+.labs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+.lab-box {
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: #f0f0f0;
+    border: 2px solid #d1d1d1;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    width: 180px;
+}
+
+.lab-box:hover {
+    border-color: #9325bb;
+}
+
+@media (max-width: 600px) {
+    .lab-box {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 5px 0;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.sidebar {
+    float: left;
+    width: 285px;
+    padding: 10px;
+}
+
+.content {
+    float: left;
+    width: 100%;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.act {
+    background-color: #9325bb; 
+    color: #ffffff;
+    border: 2px solid #9325bb;
+}

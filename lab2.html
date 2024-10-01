@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Звіти</title>
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <div style="display: flex; flex-direction: row; padding: 10px; align-items: center; justify-content: space-evenly;">
+            <div>
+                <h1>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
+                <h2>з дисципліни «ІНТЕРНЕТ-ТЕХНОЛОГІЇ та ПРОЄКТУВАННЯ WEB-ЗАСТОСУВАНЬ»</h2>
+                <h3>Студентки групи ІС-32 Рудих Кароліни</h3> 
+            </div>            
+            <img src="./image/000.jpg" height="150px" style="align-items: end;">  
+        </div>
+        <div class="nav">
+            <div class="labs-container">
+                <a href="index.html" class="lab-box">Лабораторна робота №1</a>
+                <a href="lab2.html" class="lab-box act">Лабораторна робота №2</a>
+                <a href="lab3.html" class="lab-box">Лабораторна робота №3</a>
+                <a href="lab4.html" class="lab-box">Лабораторна робота №4</a>
+                <a href="lab5.html" class="lab-box">Лабораторна робота №5</a>
+                <a href="lab6.html" class="lab-box">Лабораторна робота №6</a>
+                <a href="lab7.html" class="lab-box">Лабораторна робота №7</a>
+                <a href="lab8.html" class="lab-box">Лабораторна робота №8</a>
+                <a href="lab9.html" class="lab-box">Лабораторна робота №9</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="sidebar">
+                <button onclick="showSection('section1', this)">Тема Мета Місце розташування сайту, звіту</button>
+                <button onclick="showSection('section2', this)">Способи підключення стилів</button>
+                <button>Селектори</button>
+                <button onclick="showSection('section4', this)" style="width: 80%;">Селектори тегу</button>
+                <button onclick="showSection('section5', this)" style="width: 80%;">Селектори класу</button>
+                <button onclick="showSection('section6', this)" style="width: 80%;">Селектори ідентифікаторів</button>
+                <button onclick="showSection('section7', this)" style="width: 80%;">Інші селектори</button>
+                <button onclick="showSection('section8', this)">CSS: Шрифти Текст Таблиці Фон Контур  Списки СSS Просунутий</button>
+                <button onclick="showSection('section9', this)">ВИСНОВКИ</button>
+            </div>
+                
+            <div class="content">
+                <div id="section1" class="hidden">
+                    Тема: КАСКАДНІ ТАБЛИЦІ СТИЛІВ. СЕЛЕКТОРИ .ІДЕНТИФІКАТОРИ. СТИЛЬОВЕ ОФОРМЛЕННЯ ТЕКСТОВИХ ЕЛЕМЕНТІВ В HTML-ДОКУМЕНТАХ.
+                    <br>
+                    <br>Мета: придбати практичні навички роботи  з селекторами, ідентифікаторами, списками,  різноманітними властивостями кольору і фону,  зовнішними та внутрішними  відступами,  плаваючими елементами, оформленням текстових елементів
+                    <br>
+                    <br>Місце розташування лаби:
+                    <br>1.	Посилання репозиторій веб-застосунка
+                    <br><a href="https://github.com/karolinarm08/is_32_cakeshop_rudykh">https://github.com/karolinarm08/is_32_cakeshop_rudykh</a> 
+                    <br>2.	Посилання живу сторінку веб-застосунка
+                    <br><a href="https://karolinarm08.github.io/is_32_cakeshop_rudykh/">https://karolinarm08.github.io/is_32_cakeshop_rudykh/</a>
+                    <br>3.	Посилання на репозиторій звітного html документа
+                    <br><a href="https://github.com/karolinarm08/zvit_is_32_rudykh">https://github.com/karolinarm08/zvit_is_32_rudykh</a> 
+                    <br>4.	Посилання на живу сторінку звітного html документа
+                    <br><a href="https://karolinarm08.github.io/zvit_is_32_rudykh/">https://karolinarm08.github.io/zvit_is_32_rudykh/</a>
+                    <br>5.	Посилання на репозиторій самостійної роботи
+                    <br><a href="https://github.com/karolinarm08/independent2_is-32_rudykh">https://github.com/karolinarm08/independent2_is-32_rudykh</a>
+                    <br>6.	Посилання на живу сторінку самостійної роботи
+                    <br><a href="https://karolinarm08.github.io/independent2_is-32_rudykh/">https://karolinarm08.github.io/independent2_is-32_rudykh/</a>
+                </div>
+                <div id="section2" class="hidden">
+                    <p>1</p><img src="./image/style.png" alt="" width="100%">
+                    <p>2</p><img src="./image/style2.png" alt="" width="100%">
+                    <p>3</p><img src="./image/style3.png" alt="" width="100%">
+                </div>
+                <div id="section3" class="hidden"></div>
+                <div id="section4" class="hidden">
+                    <img src="./image/select_tag.png" alt="" width="50%">
+                    <img src="./image/select_tag2.png" alt="" width="100%">
+                    <img src="./image/select_tag3.png" alt="" width="100%">
+                </div>
+                <div id="section5" class="hidden">
+                    <img src="./image/select_class.png" alt="" width="50%">
+                    <img src="./image/select_tag2.png" alt="" width="100%">
+                    <img src="./image/select_tag3.png" alt="" width="100%">
+                </div>
+                <div id="section6" class="hidden">
+                    <img src="./image/select_id.png" alt="" width="50%">
+                    <img src="./image/select_id2.png" alt="" width="100%">
+                    <img src="./image/select_id3.png" alt="" width="100%">
+                </div>
+                <div id="section7" class="hidden">
+                    <img src="./image/other_select.png" alt="" width="50%">
+                    <img src="./image/select_tag2.png" alt="" width="100%">
+                    <img src="./image/select_tag3.png" alt="" width="100%">
+                </div>
+                <div id="section8" class="hidden">
+                    <img src="./image/other_select1.png" alt="" width="70%">
+                    <div style="display: flex; align-items: start;">
+                        <img src="./image/other_select3.png" alt="" width="50%">                    
+                        <img src="./image/other_select2.png" alt="" width="50%">
+                    </div>
+                </div>
+                <div id="section9" class="hidden">
+                    <p>У ході роботи було отримано практичні навички роботи з CSS, зокрема використання селекторів та ідентифікаторів для стилізації елементів. Вивчено оформлення тексту, роботу з кольорами, фоном, відступами, таблицями та списками. Здобуті знання дозволяють ефективно створювати структуровані та візуально привабливі веб-сторінки, а також адаптувати їх для різних пристроїв.</p>
+                </div>
+            </div>
+        </div>
+</main>
+<footer></footer>
+<script>
+    let currentSection = null;
+    let currentButton = null;
+
+    function showSection(sectionId, button) {
+        // Скрываем текущую секцию, если она есть
+        if (currentSection) {
+            document.getElementById(currentSection).classList.add('hidden');
+        }
+        // Убираем класс active с текущей кнопки, если она есть
+        if (currentButton) {
+            currentButton.classList.remove('active');
+        }
+
+        // Показываем новую секцию и добавляем класс active к новой кнопке
+        currentSection = sectionId;
+        currentButton = button;
+        document.getElementById(sectionId).classList.remove('hidden');
+        currentButton.classList.add('active');
+    }
+</script>
+
+<style>
+    .hidden {
+        display: none;
+    }
+</style>
+</body>
+</html>

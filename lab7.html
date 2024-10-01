@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poiret+One&family=Roboto:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Звіти</title>
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <div style="display: flex; flex-direction: row; padding: 10px; align-items: center; justify-content: space-evenly;">
+            <div>
+                <h1>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
+                <h2>з дисципліни «ІНТЕРНЕТ-ТЕХНОЛОГІЇ та ПРОЄКТУВАННЯ WEB-ЗАСТОСУВАНЬ»</h2>
+                <h3>Студентки групи ІС-32 Рудих Кароліни</h3> 
+            </div>            
+            <img src="./image/000.jpg" height="150px" style="align-items: end;">  
+        </div>
+        <div class="nav">
+            <div class="labs-container">
+                <a href="index.html" class="lab-box">Лабораторна робота №1</a>
+                <a href="lab2.html" class="lab-box">Лабораторна робота №2</a>
+                <a href="lab3.html" class="lab-box">Лабораторна робота №3</a>
+                <a href="lab4.html" class="lab-box">Лабораторна робота №4</a>
+                <a href="lab5.html" class="lab-box">Лабораторна робота №5</a>
+                <a href="lab6.html" class="lab-box">Лабораторна робота №6</a>
+                <a href="lab7.html" class="lab-box act">Лабораторна робота №7</a>
+                <a href="lab8.html" class="lab-box">Лабораторна робота №8</a>
+                <a href="lab9.html" class="lab-box">Лабораторна робота №9</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="sidebar">
+                <button onclick="showSection('section1', this)">1</button>
+                <button onclick="showSection('section2', this)">2</button>
+                <button onclick="showSection('section3', this)">3</button>
+                <button onclick="showSection('section4', this)">4</button>
+                <button onclick="showSection('section5', this)">5</button>
+                <button onclick="showSection('section6', this)">6</button>
+                <button onclick="showSection('section7', this)">7</button>
+            </div>
+                
+            <div class="content">
+                <div id="section1" class="hidden">1</div>
+                <div id="section2" class="hidden">2</div>
+                <div id="section3" class="hidden">3</div>
+                <div id="section4" class="hidden">4</div>
+                <div id="section5" class="hidden">5</div>
+                <div id="section6" class="hidden">6</div>
+                <div id="section7" class="hidden">7</div>
+            </div>
+        </div>
+</main>
+<footer></footer>
+<script>
+    let currentSection = null;
+    let currentButton = null;
+
+    function showSection(sectionId, button) {
+        // Скрываем текущую секцию, если она есть
+        if (currentSection) {
+            document.getElementById(currentSection).classList.add('hidden');
+        }
+        // Убираем класс active с текущей кнопки, если она есть
+        if (currentButton) {
+            currentButton.classList.remove('active');
+        }
+
+        // Показываем новую секцию и добавляем класс active к новой кнопке
+        currentSection = sectionId;
+        currentButton = button;
+        document.getElementById(sectionId).classList.remove('hidden');
+        currentButton.classList.add('active');
+    }
+</script>
+
+<style>
+    .hidden {
+        display: none;
+    }
+</style>
+</body>
+</html>
