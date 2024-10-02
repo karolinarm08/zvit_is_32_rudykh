@@ -1,0 +1,140 @@
+#section8 {
+    font-family: sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5); 
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    transition: background 0.5s ease;
+}
+
+#section8:hover {
+    background: linear-gradient(135deg, #acb6e5, #74ebd5);
+}
+
+h1, h2 {
+    font-family: 'Georgia', serif;
+    color: #2c3e50;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.primary-text {
+    font-size: 1.2rem;
+    font-family: Arial, sans-serif;
+    color: #2980b9;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+.primary-text:hover {
+    color: #1abc9c;
+}
+
+.secondary-text {
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: #8e44ad;
+    text-transform: uppercase; 
+}
+
+.with-border {
+    border: 2px dashed #16a085;
+    padding: 15px;
+    background-color: rgba(236, 240, 241, 0.8); 
+    color: #2c3e50;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease; 
+}
+
+.with-border:hover {
+    transform: scale(1.05); 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); 
+}
+
+table, th, td {
+    border: 1px solid #34495e;
+    animation: fadeIn 1s ease;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #2980b9;
+    color: white;
+    text-transform: uppercase;
+}
+
+td {
+    background-color: #ecf0f1;
+}
+
+.multi-level ul {
+    list-style-type: square;
+    margin: 0;
+    padding: 0;
+}
+
+.multi-level li {
+    padding: 5px 0;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 25px;
+}
+
+.multi-level li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #e74c3c;
+}
+
+.multi-level ul ul {
+    list-style-type: circle;
+    margin-left: 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+}
+
+
