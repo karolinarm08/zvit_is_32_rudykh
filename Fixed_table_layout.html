@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poiret+One&family=Roboto:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Фіксована таблична верстка</title>
+    <style type="text/css">
+        table {
+            width: 400px;
+            height: 500px;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+
+        .cell-1 {
+            background-color: blue;
+            color: white;
+            height: 50px;
+        }
+
+        .cell-2 {
+            background-color: gold;
+            width: 100px;
+        }
+
+        .cell-3 {
+            background-color: blue;
+            color: white;
+            height: 50px;
+        }
+
+        .cell-4, .cell-0 {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <a href="./lab3.html">На головну</a>
+
+        <div>
+            <table>
+                <tr>
+                    <td rowspan="3" class="cell-2">2</td>
+                    <td rowspan="3" class="cell-0"></td>
+                    <td colspan="2" class="cell-1">1</td>
+                    <td rowspan="3" class="cell-0"></td>
+                </tr>
+                <tr>
+                    <td class="cell-4">4</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="cell-3">3</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+
+    <footer></footer>
+</body>
+</html>

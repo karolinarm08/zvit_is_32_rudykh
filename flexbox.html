@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курс HTML і CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .product-section {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .product-image {
+            width: 100%;
+        }
+
+        .product-details {
+            margin-left: 20px;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        .product-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 32px;
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        .plus {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;            
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: grey;
+            margin-right: 10px;
+        }
+
+        .discount {
+            color: green;
+            font-size: 16px;
+        }
+
+        .timer {
+            color: orange;
+            margin-top: 10px;
+        }
+
+        .product-description {
+            margin-top: 20px;
+        }
+
+        .buy-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .similar-products {
+            margin-top: 50px;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .similar-title {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .similar-grid {
+            display: flex;
+            gap: 20px;
+        }
+
+        .similar-product {
+            background-color: white;
+            text-align: center;
+        }
+
+        .similar-product img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .similar-product .price {
+            color: red;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer div {
+            width: calc(( 100% - ( 10px * 3 )) / 4);
+            
+        }
+
+        ul {            
+            list-style: none;
+            text-align: start;
+            
+        }
+
+        .partner {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .card {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .card li img{
+            width: 70px;
+        }
+    </style>
+</head>
+<body>
+
+<main>
+<div class="container">
+    <div class="product-section">
+        <div class="product-image">
+            <img src="./flexbox_img/image.png" alt="HTML і CSS курс">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">HTML і CSS Професійний курс частина 1</h1>
+            <div class="price">
+                <span class="old-price">1,190 грн</span>
+                <span>390 грн</span>
+            </div>
+            <div class="discount">Ви економите: 800 грн (67%)</div>
+            <div class="timer">Поспішайте! Закінчується через 1 день 12 годин 03 хв</div>
+            <p class="product-description">
+                Відео запис курсу HTML і CSS. На цьому курсі ви навчитеся робити справжні проекти, такі як в індустрії. 
+                Ви будете робити їх правильно, щоб після навчання видавати результат високого рівня, за який компанії готові платити.
+            </p>
+            <a href="#" class="buy-button">Купити ➔</a>
+            <div class="plus">
+                <ul>
+                    <li>Безпечні платежі</li>
+                    <li>Захист персональних даних</li>
+                    <li>100% унікальні матеріали</li>
+                    <li>Гарантія кращої ціни</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="similar-products">
+        <h2 class="similar-title">Похожие товари</h2>
+        <div class="similar-grid">
+            <div class="similar-product">
+                <img src="./flexbox_img/1.png" alt="Linux курс">
+                <p>Linux з нуля – відеокурс</p>                
+                <div class="price"><s style="color: black;">1,190 грн</s> 390 грн</div>
+            </div>
+            <div class="similar-product">
+                <img src="./flexbox_img/2.png" alt="Windows курс">
+                <p>Удаленное администрирование серверов Windows</p>
+                <div class="price"><s style="color: black;">790 грн</s> 290 грн</div>
+            </div>
+            <div class="similar-product">
+                <img src="./flexbox_img/3.png" alt="Angular курс">
+                <p>Курс Angular 8</p>
+                <div class="price"><s style="color: black;">1,190 грн</s> 390 грн</div>
+            </div>
+            <div class="similar-product">
+                <img src="./flexbox_img/4.png" alt="курс">
+                <p>Видео курс системного администратора</p>                
+                <div class="price" style="color: black; text-decoration: underline;">Купить</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div>
+            Допомога
+            <ul>
+                <li>Довідка</li>
+                <li>Конфіденційність</li>
+                <li>Умови використання</li>
+            </ul>
+        </div>
+        <div>
+            Зв'язатися з нами
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+        <div>
+            Наші партнери
+            <ul class="partner">
+                <li><img src="./flexbox_img/image copy.png" alt=""></li>
+                <li><img src="./flexbox_img/image copy 2.png" alt=""></li>
+                <li><img src="./flexbox_img/image copy 3.png" alt=""></li>
+            </ul>
+
+        </div>
+        <div>
+            Безпечні платежі
+            <ul class="card">
+                <li><img src="./flexbox_img/image copy 4.png" alt=""></li>
+                <li><img src="./flexbox_img/image copy 5.png" alt=""></li>
+                <li><img src="./flexbox_img/image copy 6.png" alt=""></li>
+            </ul>
+            Усі операції на нашому сайті безпечні та проходять з використанням шифрованого SSL з'єднання
+        </div>
+    </div>
+</div>
+</main>
+</body>
+</html>

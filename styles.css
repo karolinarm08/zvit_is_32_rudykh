@@ -143,9 +143,7 @@ body {
     }
 }
 
-.hidden {
-    display: none;
-}
+
 
 .sidebar {
     float: left;
@@ -164,4 +162,15 @@ body {
     background-color: #9325bb; 
     color: #ffffff;
     border: 2px solid #9325bb;
+}
+
+.section3 {
+    display: flex; 
+    gap: 10px; 
+    align-content: start;
+    flex-wrap: wrap;
+}
+
+.hidden {
+    display: none;
 }
