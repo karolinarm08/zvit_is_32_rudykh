@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function showMessage(numbers, newNumbers, sortNumbers, sortNewNumbers){
+            let alertMessage = `Новий масив порожній`;
+            if (newNumbers.length != 0) {
+                alertMessage = `Новий масив: ${newNumbers}\nУпорядкований новий масив: ${sortNewNumbers}`;
+            } 
+            
+            alert(`Старий масив: ${numbers}\nУпорядкований старий масив: ${sortNumbers}\n${alertMessage}`);
+        }
+
+        function filterArray(numbers){
+            let numbers2 = [];
+            let numbers23 = [];
+            let numbers3 = [];
+
+            for (const number of numbers) {
+                if (number % 2 == 0 && number % 3 != 0) numbers2.push(number); 
+                if (number % 2 == 0 && number % 3 == 0) numbers23.push(number); 
+                if (number % 2 != 0 && number % 3 == 0) numbers3.push(number); 
+            }
+            
+            return [...numbers2, ...numbers23, ...numbers3]
+        }
+
+        function sortArray(numbers){
+            if (numbers.length <= 1) {
+                return numbers;
+            }
+
+            const pivot = numbers[0];
+            let left =[];
+            let right =[];
+            for (let index = 1; index < numbers.length; index++) {
+                if (numbers[index] < pivot) {
+                    left.push(numbers[index]);
+                } else {
+                    right.push(numbers[index]);
+                }
+            }
+
+            return [...sortArray(left), pivot, ...sortArray(right)];
+        }
+
+        let numbersString = prompt(`Введіть масив чисел, розділених пробілом`);
+        let numbers = numbersString.split(" ").map(Number);   
+
+        let newNumbers = filterArray(numbers);
+        let sortNumbers = sortArray(numbers);    
+        let sortNewNumbers = sortArray(newNumbers);    
+
+        showMessage(numbers, newNumbers, sortNumbers, sortNewNumbers)
+    </script>
+</body>
+</html>

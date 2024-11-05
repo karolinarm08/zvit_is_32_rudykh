@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function showMessage(quantity, totalPrice){
+            alert(`Ви замовили ${quantity} дроїдів загальною вартістю ${totalPrice}!`);
+        }
+
+        function makeTransaction(quantity, pricePerDroid){
+            let totalPrice = quantity * pricePerDroid;
+            showMessage(quantity, totalPrice);
+        }
+
+        let quantity = Number(prompt(`Введіть кількість замовлених дроїдів`));
+        while (isNaN(quantity)){
+            quantity = Number(prompt(`Введіть ЧИСЛО!`));
+        }
+        
+        let pricePerDroid = Number(prompt(`Введіть вартість одного дроїда`));
+        while (isNaN(pricePerDroid)){
+            pricePerDroid = Number(prompt(`Введіть ЧИСЛО!`));
+        }
+
+        makeTransaction(quantity, pricePerDroid);
+    </script>
+</body>
+</html>

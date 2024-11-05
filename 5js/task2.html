@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function showMessage(cond){
+            alert(`Результат перевірки на заборонені слова: ${cond}`);
+        }
+
+        function checkForSpam(message){
+            let modMessage = message.toLowerCase();                
+            let cond = true;
+            if (modMessage.indexOf('spam') == -1 && modMessage.indexOf('sale') == -1 ){
+                cond = false;
+            }
+            showMessage(cond);
+        }
+
+        let message = prompt(`Введіть повідомлення для перевірки`);
+        
+        checkForSpam(message);
+    </script>
+</body>
+</html>

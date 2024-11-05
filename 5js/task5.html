@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Підказка при уведенні</title>
+    <style>
+        .autocomplete-container {
+            position: relative;
+            width: 400px;
+        }
+
+        input {
+            width: -webkit-fill-available;            
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        #suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            max-height: 150px;
+            overflow-y: auto;
+            background-color: #fff;
+            z-index: 10;
+        }
+
+        .suggestion-item {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .suggestion-item:hover {
+            background-color: #b02edf47;
+        }
+    </style>
+</head>
+<body>
+
+<div class="autocomplete-container">
+    <input type="text" id="inputField" placeholder="Почніть вводити текст..." autocomplete="off">
+    <div id="suggestions"></div>
+</div>
+
+<script>
+    const words = ["1", "11", "12", "2", "20", "4", "7", "8", "55", "5", "6", "16", "47", "36", "744", "87"];
+
+    const inputField = document.getElementById("inputField");
+    const suggestionsContainer = document.getElementById("suggestions");
+
+    function showSuggestions(value) {
+        suggestionsContainer.innerHTML = "";  // Очищує попередні підказки
+
+        if (value.length === 0) {
+            return;
+        }
+
+        const filteredWords = words.filter(word => word.toLowerCase().startsWith(value.toLowerCase()));
+
+        filteredWords.forEach(word => {
+            const suggestionItem = document.createElement("div");
+            suggestionItem.classList.add("suggestion-item");
+            suggestionItem.textContent = word;
+
+            suggestionItem.addEventListener("click", () => {
+                inputField.value = word;
+                suggestionsContainer.innerHTML = ""; // Очищує підказки після вибору
+            });
+
+            suggestionsContainer.appendChild(suggestionItem);
+        });
+    }
+
+    inputField.addEventListener("input", (e) => {
+        showSuggestions(e.target.value);
+    });
+
+    document.addEventListener("click", (e) => {
+        if (!inputField.contains(e.target) && !suggestionsContainer.contains(e.target)) {
+            suggestionsContainer.innerHTML = "";
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function showMessage(numbers, value, newNumbers){
+            let alertMessage = `Новий масив порожній`;
+            if (newNumbers.length != 0) {
+                alertMessage = `Новий масив: ${newNumbers}`;
+            } 
+            
+            alert(`Старий масив: ${numbers}\nЗначення для порівняння: ${value}\n${alertMessage}`);
+        }
+
+        function filterArray(numbers, value){
+            let newNumbers = [];
+            for (const number of numbers) {
+                if (number > value) newNumbers.push(number); 
+            }
+            
+            showMessage(numbers, value, newNumbers)
+        }
+
+        let numbersString = prompt(`Введіть масив чисел, розділених пробілом`);
+        let numbers = numbersString.split(" ").map(Number);   
+        let value = Number(prompt(`Введіть значення для порівняння`));
+
+        while (isNaN(value)){
+            value = Number(prompt(`Введіть ЧИСЛО!`));
+        }
+
+        filterArray(numbers, value);
+    </script>
+</body>
+</html>
