@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="../lab6.html">Повернутись до звіту</a>
+    
+    <script>
+        let idCounter = 1;
+
+        function createProduct(obj, callback){
+            const product = { ...obj, id: idCounter++ };
+            callback(product);
+        } 
+
+        function logProduct(product){
+            console.log("Product:", product);
+        }
+
+        function logTotalPrice(product){
+            let totalPrice = product.quantity * product.price;
+            console.log(`Total Price of ${product.name}:`, totalPrice);
+        }
+
+        const products = [
+            { name: "frst", quantity: 1, price: 10 },
+            { name: "scnd", quantity: 2, price: 20 },
+            { name: "thrd", quantity: 3, price: 30 },
+            { name: "fr", quantity: 4, price: 40 },
+            { name: "fv", quantity: 5, price: 50 },
+        ];
+
+        products.forEach(product => createProduct(product, logProduct))
+        products.forEach(product => createProduct(product, logTotalPrice))
+
+    </script>
+</body>
+</html>

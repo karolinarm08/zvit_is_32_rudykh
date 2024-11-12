@@ -8,6 +8,12 @@ body {
       text-align: center;
   }
 
+  .inactive {
+    border: none !important;
+    color: #adadad !important;
+    background-color: #d1d1d1 !important;
+  }
+
   .container {
       display: flex;
       justify-content: space-between;

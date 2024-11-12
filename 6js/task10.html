@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="../lab6.html">Повернутись до звіту</a>
+
+    <script>
+        function checkBrackets(str) {
+            const array = [];
+            const brackets = {
+                '(': ')',
+                '{': '}',
+                '[': ']'
+            };
+
+            for (const char of str) {
+                if (brackets[char]) {
+                    array.push(char);
+                    //console.log(array);
+                } else if (Object.values(brackets).includes(char)) {
+                    const lastBracket = array.pop();
+                    //console.log(array);
+
+                    if (brackets[lastBracket] != char) {
+                        return false;
+                    }
+                }
+            }
+            return array.length == 0;
+        }
+
+        console.log(checkBrackets("function someFn() { return [1, 2, 3]; }")); // true
+        console.log(checkBrackets("function someFn() { return [1, 2, 3; }")); // false
+        console.log(checkBrackets("(([]){})")); // true
+        console.log(checkBrackets("(([]{)})")); // false
+        
+        /*function checkBrackets(str){
+            let result = false;
+            
+            let indx1 = str.indexOf('(');
+            if (indx1 != -1 && str.indexOf(')',indx1) != -1) {
+                result = true;
+            }
+
+            let indx2 = str.indexOf('{');
+            if (indx2 != -1 && str.indexOf('}',indx2) != -1) {
+                result = true;
+            }
+            
+            let indx3 = str.indexOf('[');
+            if (indx3 != -1 && str.indexOf(']',indx3) != -1) {
+                result = true;
+            }
+
+            return result;
+        }
+
+        let str = String(prompt());
+        alert(checkBrackets(str));*/
+
+    </script>
+</body>
+</html>

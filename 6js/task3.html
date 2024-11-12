@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="../lab6.html">Повернутись до звіту</a>
+    
+    <script>
+        const medicines = {
+            Агалгін: new Date("2022-05-01"),
+            Ношпа: new Date("2025-07-02"),
+            Альфахолін: new Date("2024-12-21"),
+            Аспірин: new Date("2022-08-15"),
+            Аспаркам: new Date("2024-04-18"),
+        };
+        
+        const currentDate = new Date();
+
+        let nameMedicines = Object.entries(medicines).map(([name]) => name);
+
+        let validMedicines = Object.entries(medicines)
+            .filter(([name, expiryDate]) => expiryDate > currentDate)
+            .sort(([, dateA], [, dateB]) => dateA - dateB);
+        
+        console.log(nameMedicines);
+        console.log(validMedicines);
+    </script>
+</body>
+</html>

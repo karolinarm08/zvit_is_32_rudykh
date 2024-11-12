@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="../lab6.html">Повернутись до звіту</a>
+
+    <script>
+        class Client {
+            #login;
+            #email;
+
+            constructor(login, email) {
+                this.#login = login;
+                this.#email = email;
+            }
+
+            get login() {
+                return this.#login;
+            }
+
+            set login(value) {
+                this.#login = value;
+            }
+
+            get email() {
+                return this.#email;
+            }
+
+            set email(value) {
+                this.#email = value;
+            }
+        }
+
+        const client = new Client('user', 'user@example.com');
+
+        console.log(client.login); 
+        console.log(client.email);
+
+        client.login = 'newUser';
+        client.email = 'newUser@example.com';
+
+        console.log(client.login); 
+        console.log(client.email);
+
+    </script>
+</body>
+</html>

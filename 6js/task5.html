@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="../lab6.html">Повернутись до звіту</a>
+
+    <script>
+        /*let idCounter = 1;
+
+        function changeFruit(fruit){            
+            return { ...fruit, price: fruit.price * 0.8, id: idCounter++ };
+        } 
+
+        const fruits = [
+        { name: "apple", price: 200 },
+        { name: "orange", price: 300 },
+        { name: "grapes", price: 750 },
+        ];
+
+        let newFruits = fruits.map(fruit => changeFruit(fruit));
+        
+        console.log(fruits);
+        console.log(newFruits);*/
+        
+        function changeFruits(fruits) {
+            let idCounter = 1; 
+            return fruits.map(fruit => ({...fruit, price: fruit.price * 0.8, id: idCounter++ }));
+        }
+
+        const fruits = [
+            { name: "apple", price: 200 },
+            { name: "orange", price: 300 },
+            { name: "grapes", price: 750 },
+        ];
+
+        const newFruits = changeFruits(fruits);
+        
+        console.log(fruits);
+        console.log(newFruits);
+        
+    </script>
+</body>
+</html>
