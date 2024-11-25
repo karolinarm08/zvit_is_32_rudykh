@@ -131,6 +131,12 @@
         document.getElementById(sectionId).classList.remove('hidden');
         currentButton.classList.add('active');
     }
+
+    // Устанавливаем начальную секцию при загрузке страницы
+    document.addEventListener('DOMContentLoaded', () => {
+            const firstButton = document.querySelector('.sidebar button:first-child'); // Первая кнопка
+            showSection('section1', firstButton); // Передаем ID секции и первую кнопку
+        });
 </script>
 
 <style>
