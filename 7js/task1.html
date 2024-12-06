@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Task 1</h1>
+    <button id="showButton">Show me</button>
+    <input type="text" id="inputField">
+</body>
+<script>
+    const button = document.getElementById('showButton');
+
+    showInput = () => {
+        const inputValue = document.getElementById('inputField').value;
+        console.log(inputValue);
+    };
+
+    button.addEventListener('click', showInput);
+</script>
+</html>

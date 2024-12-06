@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #place {
+            width: 200px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="taskTitle">Task 5</h1>
+    <div id="place"></div>
+</body>
+<script>
+    clicked = () => {
+        const isClicked = event.target.id === "place";
+        console.log(isClicked);
+    };
+
+    window.addEventListener('click', clicked);
+</script>
+</html>
